@@ -11,8 +11,8 @@ import UIKit
 //TODO:the target item
 public class JCLayoutSwiftTarget{
     
-    weak var target : UIView?
+    public weak var target : UIView?
     
-    var constraintConnection : JCLayoutSwiftConstraintConnection = .None
+    public var constraintConnection : JCLayoutSwiftConstraintConnection = .None
     
 }

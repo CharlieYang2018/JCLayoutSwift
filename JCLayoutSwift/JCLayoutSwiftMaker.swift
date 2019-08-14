@@ -12,75 +12,75 @@ import Foundation
 /// The constraint maker
 public class JCLayouSwiftMaker{
     
-    weak var view : JCLayoutSwiftView?
+    public weak var view : JCLayoutSwiftView?
     
     //1.
-    var items = [JCLayoutSwiftItem]()
+    public var items = [JCLayoutSwiftItem]()
     
     //TODO:the left constraint firstly
-    var left : JCLayoutSwiftItem{
+    public var left : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Left , from : self.view!)
         self.items.append(item)
         return item;
     }
     
     //TODO:the right constraint firstly
-    var right : JCLayoutSwiftItem{
+    public var right : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Right, from : self.view!)
         self.items.append(item)
         return item;
     }
     
     //TODO:the top constraint firstly
-    var top : JCLayoutSwiftItem{
+    public var top : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Top, from : self.view!)
         self.items.append(item)
         return item
     }
     
     //TODO:the bottom constraint firstly
-    var bottom : JCLayoutSwiftItem{
+    public var bottom : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Bottom, from : self.view!)
         self.items.append(item)
         return item
     }
     
     //TODO:the width constraint firstly
-    var width : JCLayoutSwiftItem{
+    public var width : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Width, from : self.view!)
         self.items.append(item)
         return item
     }
     
     //TODO:the height constraint firstly
-    var height : JCLayoutSwiftItem{
+    public var height : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Height, from : self.view!)
         self.items.append(item)
         return item
     }
     
     //TODO:the centerX constraint firstly
-    var centerX : JCLayoutSwiftItem{
+    public var centerX : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .CenterX, from : self.view!)
         self.items.append(item)
         return item
     }
     
     //TODO:the centerY constraint firstly
-    var centerY : JCLayoutSwiftItem{
+    public var centerY : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .CenterY, from : self.view!)
         self.items.append(item)
         return item
     }
     
     //TODO:the center contraint firstly
-    var center : JCLayoutSwiftItem{
+    public var center : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Center, from : self.view!)
         self.items.append(item)
         return item
     }
     
-    var edges : JCLayoutSwiftItem{
+    public var edges : JCLayoutSwiftItem{
         let item = JCLayoutSwiftItem(with: .Edges, from : self.view!)
         self.items.append(item)
         return item

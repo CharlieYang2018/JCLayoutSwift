@@ -10,7 +10,7 @@ import UIKit
 
 public extension JCLayoutSwiftView{
     
-    var let_left : JCLayoutSwiftTarget{
+    public var let_left : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .Left
@@ -18,7 +18,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var let_right : JCLayoutSwiftTarget{
+    public var let_right : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .Right
@@ -26,7 +26,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var let_top : JCLayoutSwiftTarget{
+    public var let_top : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .Top
@@ -34,7 +34,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var let_bottom : JCLayoutSwiftTarget{
+    public var let_bottom : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .Bottom
@@ -42,7 +42,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var let_centerX : JCLayoutSwiftTarget{
+    public var let_centerX : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .CenterX
@@ -50,7 +50,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var let_centerY : JCLayoutSwiftTarget{
+    public var let_centerY : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .CenterY
@@ -58,7 +58,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var let_Center : JCLayoutSwiftTarget{
+    public var let_Center : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .Center
@@ -66,7 +66,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var let_edges : JCLayoutSwiftTarget{
+    public var let_edges : JCLayoutSwiftTarget{
         let swiftTarget = JCLayoutSwiftTarget()
         swiftTarget.target = self
         swiftTarget.constraintConnection = .Edges
@@ -74,7 +74,7 @@ public extension JCLayoutSwiftView{
         return swiftTarget
     }
     
-    var jcLayoutManager : JCLayoutManager {
+    public var jcLayoutManager : JCLayoutManager {
         var isExist : JCLayoutManager?  = objc_getAssociatedObject(self, &managerToken) as? JCLayoutManager
         if  isExist == nil {
             let layout = JCLayoutManager(self)

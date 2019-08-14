@@ -12,24 +12,24 @@ import UIKit
 /// The layout item.Every item incude one or more constraint
 public class JCLayoutSwiftItem{
     
-    var constraints = [JCLayoutSwiftConstraint]()
+    public var constraints = [JCLayoutSwiftConstraint]()
     
-    var offsetValue : Float = 0
+    public var offsetValue : Float = 0
     
-    var multiplieValue : Float = 1.0
+    public var multiplieValue : Float = 1.0
     
-    weak var from : JCLayoutSwiftView?
+    public weak var from : JCLayoutSwiftView?
     
-    var to : JCLayoutSwiftTarget?
+    public var to : JCLayoutSwiftTarget?
     
-    var priority : JCLayoutSwiftPriority = .Required
-    
-    
-    var relationValue : JCLayoutSwiftConstraintRealtion = .Equal
+    public var priority : JCLayoutSwiftPriority = .Required
     
     
+    public var relationValue : JCLayoutSwiftConstraintRealtion = .Equal
     
-    init(with constraint:JCLayoutSwiftConstraintConnection,from target:JCLayoutSwiftView) {
+    
+    
+    public init(with constraint:JCLayoutSwiftConstraintConnection,from target:JCLayoutSwiftView) {
         let newConstraint = JCLayoutSwiftConstraint(with:constraint)
         self.constraints.append(newConstraint)
         let toTarget = JCLayoutSwiftTarget()
@@ -42,21 +42,21 @@ public class JCLayoutSwiftItem{
     
     
     //TODO:add left constraint
-    var left : JCLayoutSwiftItem{
+    public var left : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.Left)
         self.constraints.append(newConstraint)
         return self
     }
     
     //TODO:add right constraint
-    var right : JCLayoutSwiftItem{
+    public var right : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.Right)
         self.constraints.append(newConstraint)
         return self
     }
     
     //TODO:add top constraint
-    var top : JCLayoutSwiftItem{
+    public var top : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.Top)
         self.constraints.append(newConstraint)
         return self
@@ -64,35 +64,35 @@ public class JCLayoutSwiftItem{
     
     
     //TODO:add bottom contraint
-    var bottom : JCLayoutSwiftItem{
+    public var bottom : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.Bottom)
         self.constraints.append(newConstraint)
         return self
     }
     
     //TODO:add centerX constraint
-    var centerX : JCLayoutSwiftItem{
+    public var centerX : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.CenterX)
         self.constraints.append(newConstraint)
         return self
     }
     
     //TODO:add centerY constraint
-    var centerY : JCLayoutSwiftItem{
+    public var centerY : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.CenterY)
         self.constraints.append(newConstraint)
         return self
     }
     
     //TODO:add center constraint
-    var center : JCLayoutSwiftItem{
+    public var center : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.Center)
         self.constraints.append(newConstraint)
         return self
     }
     
     //TODO:add edges constraint
-    var edges : JCLayoutSwiftItem{
+    public var edges : JCLayoutSwiftItem{
         let newConstraint = JCLayoutSwiftConstraint(with:.Edges)
         self.constraints.append(newConstraint)
         return self
@@ -100,28 +100,28 @@ public class JCLayoutSwiftItem{
     
     //TODO:add offset
     @discardableResult
-    func offset(_ value:Float) -> JCLayoutSwiftItem {
+    public func offset(_ value:Float) -> JCLayoutSwiftItem {
         self.offsetValue = value
         return self;
     }
     
     //TODO:add muiltiplie
     @discardableResult
-    func multiplie(_ value:Float) -> JCLayoutSwiftItem {
+    public func multiplie(_ value:Float) -> JCLayoutSwiftItem {
         self.multiplieValue = value
         return self
     }
     
     //TODO:add relation equal
     @discardableResult
-    func equalTo(_ target:JCLayoutSwiftTarget) -> JCLayoutSwiftItem {
+    public func equalTo(_ target:JCLayoutSwiftTarget) -> JCLayoutSwiftItem {
         self.relationValue = .Equal
         self.to = target
         return self
     }
     
     @discardableResult
-    func equal(_ view:JCLayoutSwiftView) -> JCLayoutSwiftItem {
+    public func equal(_ view:JCLayoutSwiftView) -> JCLayoutSwiftItem {
         self.relationValue = .Equal
         let toTarget = JCLayoutSwiftTarget()
         toTarget.target = view
@@ -130,7 +130,7 @@ public class JCLayoutSwiftItem{
         return self
     }
     
-    func v_equal(_ value:Float) {
+    public func v_equal(_ value:Float) {
         self.relationValue = .Equal
         self.to?.target = nil
         self.offsetValue = value
@@ -138,7 +138,7 @@ public class JCLayoutSwiftItem{
     
     //TODO:add relation grater than
     @discardableResult
-    func greaterThan(_ target:JCLayoutSwiftTarget) -> JCLayoutSwiftItem {
+    public func greaterThan(_ target:JCLayoutSwiftTarget) -> JCLayoutSwiftItem {
         self.relationValue = .GreaterThan;
         self.to = target
         return self
@@ -147,7 +147,7 @@ public class JCLayoutSwiftItem{
     
     //TODO:add relation less than
     @discardableResult
-    func lessThan(_ target:JCLayoutSwiftTarget) -> JCLayoutSwiftItem {
+    public func lessThan(_ target:JCLayoutSwiftTarget) -> JCLayoutSwiftItem {
         self.relationValue = .LessThan;
         self.to = target
         return self
@@ -155,14 +155,14 @@ public class JCLayoutSwiftItem{
     
     //TODO:add priority
     @discardableResult
-    func priority(_ value:JCLayoutSwiftPriority) -> JCLayoutSwiftItem{
+    public func priority(_ value:JCLayoutSwiftPriority) -> JCLayoutSwiftItem{
         self.priority = value;
         return self
     }
     
     
     //TODO:create auto layout constraint
-    func createAutoLayoutConstarint(_ target:JCLayoutSwiftView) {
+    public func createAutoLayoutConstarint(_ target:JCLayoutSwiftView) {
         self.from = target
         //1.
         for constraint in self.constraints {

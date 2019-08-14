@@ -24,7 +24,7 @@ public class JCLayoutSwiftConstraint{
 
 
 /// The connection between constarint
-internal enum JCLayoutSwiftConstraintConnection : Int{
+public enum JCLayoutSwiftConstraintConnection : Int{
     
     case None       = 0x00
     
@@ -48,7 +48,7 @@ internal enum JCLayoutSwiftConstraintConnection : Int{
     
     case Edges      = 0x200
     
-    func convertAutoLayouAttibutes() -> NSLayoutConstraint.Attribute {
+    public func convertAutoLayouAttibutes() -> NSLayoutConstraint.Attribute {
         switch self {
         case .Left:
             return .left
@@ -73,7 +73,7 @@ internal enum JCLayoutSwiftConstraintConnection : Int{
 }
 
 /// The relation type
-internal enum JCLayoutSwiftConstraintRealtion : Int{
+public enum JCLayoutSwiftConstraintRealtion : Int{
     
     case Equal          = 0
     
@@ -81,7 +81,7 @@ internal enum JCLayoutSwiftConstraintRealtion : Int{
     
     case LessThan       = 2
     
-    func convertAutoLayoutRelation() -> NSLayoutConstraint.Relation {
+    public func convertAutoLayoutRelation() -> NSLayoutConstraint.Relation {
         switch self {
         case .GreaterThan:
             return .greaterThanOrEqual

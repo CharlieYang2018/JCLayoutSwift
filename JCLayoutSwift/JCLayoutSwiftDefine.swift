@@ -11,7 +11,7 @@ import UIKit
 
 //Just for Define Something
 
-typealias JCLayoutSwiftView = UIView
+public typealias JCLayoutSwiftView = UIView
 
-let JCLayoutSwiftErrorPrefix = "JCLayoutSwiftError:"
+public let JCLayoutSwiftErrorPrefix = "JCLayoutSwiftError:"
 

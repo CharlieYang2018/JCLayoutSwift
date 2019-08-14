@@ -13,15 +13,15 @@ public class JCLayoutManager{
     
     private let make : JCLayouSwiftMaker = JCLayouSwiftMaker()
     
-    weak var view : JCLayoutSwiftView?
+    public weak var view : JCLayoutSwiftView?
     
-    init(_ view:JCLayoutSwiftView) {
+    public init(_ view:JCLayoutSwiftView) {
         self.view = view
         self.make.view = view
         view.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func create(_ layout:(_ make:JCLayouSwiftMaker)->Void) {
+    public func create(_ layout:(_ make:JCLayouSwiftMaker)->Void) {
         //1.make layout items firstly
         layout(self.make)
         

@@ -26,38 +26,38 @@ public class JCLayoutSwiftPriority : ExpressibleByFloatLiteral , Equatable{
     }
     
     //Required priority
-    static var Required: JCLayoutSwiftPriority{
+    public static var Required: JCLayoutSwiftPriority{
         return 1000.0
     }
     
     //Hight priority
-    static var High : JCLayoutSwiftPriority{
+    public static var High : JCLayoutSwiftPriority{
         return 750.0
     }
     
     //Medium priority
-    static var Medium : JCLayoutSwiftPriority{
+    public static var Medium : JCLayoutSwiftPriority{
         return 501.0
     }
     
     //Low priority
-    static var Low : JCLayoutSwiftPriority{
+    public static var Low : JCLayoutSwiftPriority{
         return 250.0
     }
     
-    static func > (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority) -> Bool {
+    public static func > (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority) -> Bool {
         return lyot.value>ryot.value
     }
     
-    static func < (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority)->Bool{
+    public static func < (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority)->Bool{
         return lyot.value<ryot.value
     }
     
-    static func >= (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority) -> Bool {
+    public static func >= (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority) -> Bool {
         return lyot.value>=ryot.value
     }
     
-    static func <= (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority)->Bool{
+    public static func <= (_ lyot:JCLayoutSwiftPriority , _ ryot:JCLayoutSwiftPriority)->Bool{
         return lyot.value<=ryot.value
     }
     
