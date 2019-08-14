@@ -2,26 +2,26 @@
 //  JCLayoutSwiftPriority.swift
 //  MySwift
 //
-//  Created by Linda Wang on 2018/10/15.
+//  Created by Charlie Yang on 2018/10/15.
 //  Copyright © 2018 Charlie. All rights reserved.
 //
 
 import UIKit
 
-internal class JCLayoutSwiftPriority : ExpressibleByFloatLiteral , Equatable{
+public class JCLayoutSwiftPriority : ExpressibleByFloatLiteral , Equatable{
     
-    typealias FloatLiteralType = Float
+    public typealias FloatLiteralType = Float
     
     let value : FloatLiteralType
     
     
     //inherit from ExpressibleByFloatLiteral
-    required init(floatLiteral value: Float) {
+    required public init(floatLiteral value: Float) {
         self.value = value;
     }
     
     //inherit from Equatable
-    static func == (lhs: JCLayoutSwiftPriority, rhs: JCLayoutSwiftPriority) -> Bool {
+    public static func == (lhs: JCLayoutSwiftPriority, rhs: JCLayoutSwiftPriority) -> Bool {
         return lhs.value == rhs.value
     }
     
