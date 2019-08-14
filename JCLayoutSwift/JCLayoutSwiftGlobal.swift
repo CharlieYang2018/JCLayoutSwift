@@ -2,14 +2,14 @@
 //  JCLayoutSwiftDefine.swift
 //  MySwift
 //
-//  Created by Linda Wang on 2018/10/12.
+//  Created by Charlie Yang on 2018/10/12.
 //  Copyright © 2018 Charlie. All rights reserved.
 //
 
 import Foundation
 
 /// Some global method
-internal class JCLayoutSwiftGlobal{
+public class JCLayoutSwiftGlobal{
     
 }
 

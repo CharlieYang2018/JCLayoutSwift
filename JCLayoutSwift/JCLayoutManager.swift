@@ -2,14 +2,14 @@
 //  JCLayoutManager.swift
 //  MySwift
 //
-//  Created by Linda Wang on 2018/10/12.
+//  Created by Charlie Yang on 2018/10/12.
 //  Copyright © 2018 Charlie. All rights reserved.
 //
 
 import Foundation
 
 /// view layout manager
-internal class JCLayoutManager{
+public class JCLayoutManager{
     
     private let make : JCLayouSwiftMaker = JCLayouSwiftMaker()
     
