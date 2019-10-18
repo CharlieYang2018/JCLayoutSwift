@@ -73,6 +73,22 @@ public extension JCLayoutSwiftView{
         
         return swiftTarget
     }
+  
+    public var let_width : JCLayoutSwiftTarget{
+      let swiftTarget = JCLayoutSwiftTarget()
+      swiftTarget.target = self
+      swiftTarget.constraintConnection = .Width
+      
+      return swiftTarget
+    }
+
+    public var let_height : JCLayoutSwiftTarget{
+      let swiftTarget = JCLayoutSwiftTarget()
+      swiftTarget.target = self
+      swiftTarget.constraintConnection = .Height
+      
+      return swiftTarget
+    }
     
     public var jcLayoutManager : JCLayoutManager {
         var isExist : JCLayoutManager?  = objc_getAssociatedObject(self, &managerToken) as? JCLayoutManager
