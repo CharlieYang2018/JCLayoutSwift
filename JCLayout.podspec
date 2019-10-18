@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "JCLayoutSwift", "JCLayoutSwift/**/*.{h,m,swift}"
-  s.exclude_files = "JCLayoutSwift/extense"
+  #  s.exclude_files = "JCLayoutSwift/extense"
 
   # s.public_header_files = "Classes/**/*.h"
 
