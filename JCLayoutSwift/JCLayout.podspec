@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint JCLayoutSwift.podspec' to ensure this is a
+#  Be sure to run `pod spec lint JCLayout.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JCLayout"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "We use jclayout to handle the view layout in iOS."
 
   # This description is used to generate tags and improve search results.
